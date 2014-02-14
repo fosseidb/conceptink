@@ -1,0 +1,26 @@
+    [
+      {
+        "id": "01",
+        "title": "Tatto News 01",
+        "description": "",
+        "summary": "Lots of text goes here because its a whole article!",
+        "url": "story1",
+        "imageUrl": "http://www.colourlovers.com/paletteImg/69D2E7/A7DBD8/E0E4CC/F38630/FA6900/Giant_Goldfish.png",
+      },
+    {
+        "id": "02",
+        "title": "Tatto News 02",
+        "description": "",
+        "summary": "Lots of text goes here because its a whole article!",
+        "url": "story2",
+        "imageUrl": "http://www.colourlovers.com/paletteImg/69D2E7/A7DBD8/E0E4CC/F38630/FA6900/Giant_Goldfish.png",
+      },
+    {
+        "id": "03",
+        "title": "Tatto News 03",
+        "description": "",
+        "summary": "Lots of text goes here because its a whole article!",
+        "url": "/story3",
+        "imageUrl": "http://www.colourlovers.com/paletteImg/69D2E7/A7DBD8/E0E4CC/F38630/FA6900/Giant_Goldfish.png",
+      },
+]

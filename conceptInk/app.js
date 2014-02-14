@@ -9,7 +9,13 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
-var project = require('./routes/project');
+var clienthome = require('./routes/clienthome');
+var newsfeed = require('./routes/newsfeed');
+var article = require('./routes/article');
+var makerequest = require('./routes/makerequest');
+var yourrequests = require('./routes/yourrequests');
+var artistroster = require('./routes/artistroster');
+var artist = require('./routes/artist');
 // Example route
 // var user = require('./routes/user');
 
@@ -37,8 +43,13 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
-app.get('/project/:name', project.viewProject);
-
+app.get('/clienthome', clienthome.viewProject);
+app.get('/newsfeed', newsfeed.viewFeed);
+app.get('/article', article.viewArticle);
+app.get('/makerequest', makerequest.makeRequest);
+app.get('/yourrequests', yourrequests.viewRequest);
+app.get('/artistroster', artistroster.viewArtists);
+app.get('/artist', artist.viewArtist);
 // Example route
 // app.get('/users', user.list);
 

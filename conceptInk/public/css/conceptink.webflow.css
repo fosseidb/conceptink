@@ -837,4 +837,25 @@ p {
     text-align: center;
     text-decoration: none;
   }
+  .loginlogin {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    font-family:'Open Sans', sans-serif;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+  }
+    .loginlogo {
+    position: static;
+    left: 0px;
+    top: 0px;
+    display: inline-block;
+    overflow-x: visible;
+    overflow-y: visible;
+    width: 115px;
+    clear: none;
+  }
 }
