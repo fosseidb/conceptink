@@ -4,7 +4,7 @@
 <html data-wf-site="52f06826a8b031ee5c0003d8">
 <head>
   <meta charset="utf-8">
-  <title>Conceptink - Your Requests</title>
+  <title>Conceptink - Article</title>
   <meta name="description" content="ConceptInk is a page meant for both tattoo artists and clients. Are you looking to get a tattoo but don't know what you want? Get inspired or post a request.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -27,27 +27,26 @@
 <body>
   <div>
     <div class="w-clearfix jumbo"><a class="requestbutton" href="./yourrequests">Requests</a>
-      <h2 class="requestheading">Requests</h2>
+      <h2 class="makerequestheading">Your Request</h2>
       <a class="logobutton" href="./clienthome"></a>
     </div>
   </div>
+
+
+
+
   <div class="w-clearfix articlesection">
-    <!-- <h4 class="h4norequests">You currently have no active requests.</h4> -->
-    
-    {{#each requests}}
-      <div class="requestlistitem" id={{id}}>
-      <a href="./request"><img class="requestimage" src={{imageURL}}></a>
-      <a href="./request" class="requesttitle">{{title}}</a>
-      <a class="articletext" href="./request">{{description}}</a>
-      <p class ="articletext">{{keywords}}</p>
-      <p>{{deadline}}</p>
-      </div>
-      <hr>
-    {{/each}}
-
-
+    <h3 class="articletitle">{{title}}</h3>
+    <img class="articlepic-1" src="{{imageURL}}">
+    <p>{{keywords}}</p>
+    <p>{{description}}</p>
+    <p>{{deadline}}</p>
   </div>
-  <div class="emptysection"></div>
+
+
+
+
+  <a class="backtonews" href="./yourrequests">Back To Requests</a>
   <div class="w-clearfix base">
     <a class="w-inline-block twitter" href="http://www.twitter.com" target="_blank"></a>
     <a class="w-inline-block facebookblock" href="http://www.facebook.com" target="_blank"></a>

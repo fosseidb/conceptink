@@ -34,17 +34,19 @@
   <div class="requestformborder">
     <div class="requestformsection">
       <div class="w-form">
-        <form id="new-request-form" role="form">
-          <label class="requesttitles" for="name">Request Title</label>
-          <input id="title" class="w-input titleinput" type="text" placeholder="Enter your name" name="title" data-name="Title"></input>
-          <label class="requesttitles" for="keywords">Keywords:</label>
-          <textarea id="keywords" class="w-input" placeholder="Keywords"></textarea>
-          <label class="requesttitles">Deadline</label>
-          <select id="deadline" class="w-select deadlinedropdown" name="dropdown">
-            <option value="1w">1 week</option>
-            <option value="2w">2 weeks</option>
-            <option value="1m">1 month</option>
+        <form id="new-request-form" role="form" method="get" action="/request">
+          <!-- <label class="requesttitles" for="name">Request Title</label> -->
+          <input id="title" class="w-input titleinput" type="text" placeholder="Request title" name="title" ></input>
+          <!-- <label class="requesttitles" for="keywords">Keywords:</label> -->
+          <input id="keywords" class="w-input" type="text" placeholder="Keywords" name="keywords"></input>
+          <textarea id="description" class="w-input" type="text" placeholder="Description" name="description"></textarea>
+          <!-- <label class="requesttitles">Deadline</label> -->
+          <select id="deadline" class="w-select deadlinedropdown" name="dropdown" placeholder="Deadline">
+            <option value="1w" id="deadline">1 week</option>
+            <option value="2w" id="deadline">2 weeks</option>
+            <option value="1m" id="deadline">1 month</option>
           </select>
+          <input id="imageURL" class="w-input titleinput" type="text" placeholder="concept URL" name="imageURL" data-name="imageURL"></input>
           <input id="newRequestSubmitButton" class="w-button submitrequest" type="submit" value="Submit" data-wait="Please wait..."></input>
         </form>
         <div class="w-form-done">

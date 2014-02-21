@@ -16,6 +16,7 @@ var makerequest = require('./routes/makerequest');
 var yourrequests = require('./routes/yourrequests');
 var artistroster = require('./routes/artistroster');
 var artist = require('./routes/artist');
+var request = require('./routes/request');
 // Example route
 // var user = require('./routes/user');
 
@@ -58,6 +59,7 @@ app.get('/makerequest', makerequest.makeRequest);
 app.get('/yourrequests', yourrequests.viewRequest);
 app.get('/artistroster', artistroster.viewArtists);
 app.get('/artist', artist.viewArtist);
+app.get('/request', request.addRequest);
 // Example route
 // app.get('/users', user.list);
 
