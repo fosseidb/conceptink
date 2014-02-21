@@ -32,11 +32,22 @@
   <div class="logninmidsection">
     <div class="loginblock">
       <div class="w-form">
-        <form action="demo_form.asp" method="get">
-          <input class="w-input loginfield" type="text" placeholder="Enter your name" name="name" data-name="Name" required="required"></input>
-          <input class="w-input loginfield" type="email" placeholder="Enter your email address" name="email" data-name="Email" required="required"></input>
-          <input class="w-button loginbutton" type="submit" value="Join the Concept" data-wait="Please wait..."></input>
+        <form id="new-member-form" role="form">
+          <input class="w-input loginfield" type="text" placeholder="Enter your name" id="name" name="name" data-name="Name" required="required"></input>
+          <input class="w-input loginfield" type="email" placeholder="Enter your email address" id="email" name="email" data-name="Email" required="required"></input>
+          <input class="w-input loginfield" type="password" placeholder="Enter your password" id="password" name="password" data-name="Password" required="required"></input>
+          <input class="w-input loginfield" type="password" placeholder="Retype your password" id="password" name="password" data-name="Password" required="required"></input>
+          <input type="radio" id="type" name="type" value='1'>Client
+          <input type="radio" id="type" name="type" value='0'>Artist
+          <input id="newMemberSubmitButton" class="w-button loginbutton" type="submit" value="Join the Concept" data-wait="Please wait..."></input>
         </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+          <a class="loginlogin" href="./clienthome">Enter</a>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form :(</p>
+        </div>
       </div>
     </div>
     <div class="logintest"><hr></div>
@@ -45,17 +56,12 @@
         <form class="w-clearfix" name="email-form" data-name="Email Form">
           <img class="facebookblock" src="images/face.png" alt="52f45f9e2b5f813919000639_face.png"><a class="connectface" href="./clienthome">Log in with Facebook</a>
         </form>
-        <div class="w-form-done">
-          <p>Thank you! Your submission has been received!</p>
-        </div>
-        <div class="w-form-fail">
-          <p>Oops! Something went wrong while submitting the form :(</p>
-        </div>
       </div>
     </div>
   </div><a class="loginlogin" href="./clienthome">Sign In</a>
 </body>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
+  <script src="/js/introHCI.js"></script>
 </body>
 </html>

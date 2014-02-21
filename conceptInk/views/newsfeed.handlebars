@@ -31,24 +31,23 @@
       <a class="logobutton" href="./clienthome"></a>
     </div>
   </div>
-  <div class="articlesection"></div>
-  <ul class="w-list-unstyled">
-    <li class="w-clearfix articlelistitem"><a class="newsfeedtitle" href="./article">London Expo</a>
-      <a class="w-inline-block articleimage" href="./article"></a><a class="newstext" href="./article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</a>
-    </li>
-    <li class="w-clearfix articlelistitem">
-      <a class="w-inline-block article2image" href="./article"></a><a class="newsfeedtitle" href="./article">Hot girl gets tattoo</a><a class="newstext" href="./article">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</a>
-    </li>
-    <li>
-      <div class="w-clearfix base">
-        <a class="w-inline-block twitter" href="http://www.twitter.com" target="_blank"></a>
-        <a class="w-inline-block facebookblock" href="http://www.facebook.com" target="_blank"></a>
-        <a class="w-inline-block emailblock" href="mailto:alex.fosseidbraaten@gmail.com?subject=ConceptInk%20Contact"></a>
-        <a class="w-inline-block google-block" href="http://google.com" target="_blank"></a>
-        <div class="copyright">© 2014 ConceptInk Ltd.</div>
-      </div>
-    </li>
-  </ul>
+  <div class="w-clearfix articlesection">
+    {{#each articles}}
+    <div class="articlelistitem" id={{id}}>
+      <a href="./article"><img class="articleimage" src={{imageUrl}}></a>
+      <a href="./article" class"newsfeedtitle">{{title}}</a>
+      <a class="newstext" href="./article">{{description}}</a>
+    </div>
+    <hr>
+    {{/each}}
+  </div>
+  <div class="w-clearfix base">
+    <a class="w-inline-block twitter" href="http://www.twitter.com" target="_blank"></a>
+    <a class="w-inline-block facebookblock" href="http://www.facebook.com" target="_blank"></a>
+    <a class="w-inline-block emailblock" href="mailto:alex.fosseidbraaten@gmail.com?subject=ConceptInk%20Contact"></a>
+    <a class="w-inline-block google-block" href="http://google.com" target="_blank"></a>
+    <div class="copyright">© 2014 ConceptInk Ltd.</div>
+  </div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
 </body>

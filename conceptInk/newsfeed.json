@@ -1,26 +1,28 @@
-    [
-      {
-        "id": "01",
-        "title": "Tatto News 01",
-        "description": "",
-        "summary": "Lots of text goes here because its a whole article!",
-        "url": "story1",
-        "imageUrl": "http://www.colourlovers.com/paletteImg/69D2E7/A7DBD8/E0E4CC/F38630/FA6900/Giant_Goldfish.png",
-      },
+{
+    "articles": [
     {
-        "id": "02",
-        "title": "Tatto News 02",
-        "description": "",
-        "summary": "Lots of text goes here because its a whole article!",
-        "url": "story2",
-        "imageUrl": "http://www.colourlovers.com/paletteImg/69D2E7/A7DBD8/E0E4CC/F38630/FA6900/Giant_Goldfish.png",
-      },
+    "id": "01",
+    "title": "Epic Convention in London!!",
+    "description": "A little desctiption goes in here, cuz its just a desctiption.",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+    "url": "story1",
+    "imageUrl": "/images/convention01.jpg"
+    },
     {
-        "id": "03",
-        "title": "Tatto News 03",
-        "description": "",
-        "summary": "Lots of text goes here because its a whole article!",
-        "url": "/story3",
-        "imageUrl": "http://www.colourlovers.com/paletteImg/69D2E7/A7DBD8/E0E4CC/F38630/FA6900/Giant_Goldfish.png",
-      },
-]
+    "id": "02",
+    "title": "Hot girl gets sexy tattoo",
+    "description": "A little desctiption goes in here, cuz its just a desctiption.",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+    "url": "story2",
+    "imageUrl": "/images/sexy-tattoo-girls10.jpg"
+    },
+    {
+    "id": "03",
+    "title": "Tatto News 03",
+    "description": "A little desctiption goes in here, cuz its just a desctiption.",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
+    "url": "/story3",
+    "imageUrl": "http://www.colourlovers.com/paletteImg/69D2E7/A7DBD8/E0E4CC/F38630/FA6900/Giant_Goldfish.png"
+    }
+  ]
+}

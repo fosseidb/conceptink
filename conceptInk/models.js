@@ -8,6 +8,7 @@ var MemberSchema = new Mongoose.Schema({
 	"email": String,
 	"password": String,
 	"type": Number,
+	"rating": Number,
 });
 
 exports.Member = Mongoose.model('Member', MemberSchema);

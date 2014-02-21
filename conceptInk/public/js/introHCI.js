@@ -9,5 +9,91 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	// add any functionality and listeners you want here
+	// $('.project a').click(function(e) {
+	// 	// Prevent following the link
+	// 	e.preventDefault();
+
+	// 	// Get the div ID, e.g., "project3"
+	// 	var projectID = $(this).closest('.project').attr('id');
+	// 	// get rid of 'project' from the front of the id 'project3'
+	// 	var idNumber = projectID.substr('project'.length);
+
+	// 	// this is the URL we'll call
+	// 	var url_call = '/project/'+idNumber;
+
+	// 	// How to respond to the GET request
+	// 	function addProjectDetails(project_json) {
+	// 		// We need to compute a display string for the date
+	// 		// Search 'toLocaleDateString' online for more details.
+	// 		var date_obj = new Date(project_json['date']);
+	// 		var options = {
+	// 			weekday: "long",
+	// 			year: "numeric",
+	// 			month: "long",
+	// 			day: "numeric"
+	// 		};
+	// 		var display_date = date_obj.toLocaleDateString('en-US', options);
+
+	// 		// compose the HTML
+	// 		var new_html =
+	// 			'<div class="project-date">'+display_date+'</div>'+
+	// 			'<div class="project-summary">'+project_json['summary']+'</div>'+
+	// 			'<button class="project-delete btn btn-default" '+
+	// 				'type="button">delete</button>';
+
+	// 		// get the DIV to add content to
+	// 		var details_div = $('#project' + idNumber + ' .details');
+	// 		// add the content to the DIV
+	// 		details_div.html(new_html);
+
+	// 		details_div.find('.project-delete').click(function(e) {
+	// 			$.post('/project/'+idNumber+'/delete', function() {
+	// 				window.location.href = '/';
+	// 			});
+	// 		});
+	// 	}
+
+	// 	// issue the GET request
+	// 	$.get(url_call, addProjectDetails);
+	// });
+
+	$('#newMemberSubmitButton').click(function(e) {
+		console.log('clicked');
+		var name = $('#new-member-form #name').val();
+		var email = $('#new-member-form #email').val();
+		var password = $('#new-member-form #password').val();
+		var type = $('#new-member-form #type').val();
+		var json = {
+			'name': name,
+			'email': email,
+			'password':  password,
+			'type': type,
+			'rating': 0
+		};
+		console.log(json);
+		$.post('./member/new', json, function() {
+			window.location.href = './clienthome'; // reload the page
+		});
+	});
+
+	$('#newRequestSubmitButton').click(function(e) {
+	console.log('clicked');
+	var title = $('#new-request-form #title').val();
+	var keywords = $('#new-request-form #keywords').val();
+	var deadline = $('#new-request-form #deadline').val();
+	//var type = $('#new-request-form #type').val();
+	var json = {
+		//'user': user,
+		'title': name,
+		'keywords': email,
+		'deadline':  password,
+		'type': type
+	};
+	console.log(json);
+	// $.post('/project/new', json, function() {
+	// 	window.location.href = './clienthome'; // reload the page
+	// });
+	});
 }
+
+
