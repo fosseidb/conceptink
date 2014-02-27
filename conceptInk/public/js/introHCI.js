@@ -9,30 +9,32 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$('.request a').click(function(e) {
+	$('.requestlistitem a').click(function(e) {
 		// Prevent following the link
 		e.preventDefault();
 		console.log('clicked request');
-		// // Get the div ID, e.g., "project3"
-		// var requestID = $(this).closest('.requestlistitem').attr('id');
-		// console.log(requestID);
-		// // get rid of 'project' from the front of the id 'project3'
-		// var idNumber = projectID.substr('requestlistitem'.length);
-		// console.log(idNumber);
-		// // this is the URL we'll call
-		// var url_call = '/request/'+idNumber;
-		// console.log(url_call);
-		// // How to respond to the GET request
+		// Get the div ID, e.g., "project3"
+		var requestID = $(this).closest('.requestlistitem').attr('id');
+		console.log('requestID ' + requestID);
+		// get rid of 'project' from the front of the id 'project3'
+		//var idNumber = projectID.substr('requestlistitem'.length);
+		//onsole.log('idNumber ' + idNumber);
+		// this is the URL we'll call
+		var url_call = '/request/'+requestID;
+		console.log('url_Call ' +url_call);
+		
+
+		//How to respond to the GET request
 		// function addRequestDetails(project_json) {
-		// 	// We need to compute a display string for the date
-		// 	// Search 'toLocaleDateString' online for more details.
-		// 	// var date_obj = new Date(project_json['deadline']);
-		// 	// var options = {
-		// 	// 	weekday: "long",
-		// 	// 	year: "numeric",
-		// 	// 	month: "long",
-		// 	// 	day: "numeric"
-		// 	// };
+		// 	//We need to compute a display string for the date
+		// 	//Search 'toLocaleDateString' online for more details.
+		// 	var date_obj = new Date(project_json['deadline']);
+		// 	var options = {
+		// 		weekday: "long",
+		// 		year: "numeric",
+		// 		month: "long",
+		// 		day: "numeric"
+		// 	};
 		// 	var display_date = project_json['deadline']; //date_obj.toLocaleDateString('en-US', options);
 
 		// 	// compose the HTML
@@ -54,8 +56,8 @@ function initializePage() {
 		// 	});
 		// }
 
-		// // issue the GET request
-		// $.get(url_call, addRequestDetails);
+		// issue the GET request
+		$.get(url_call, addRequestDetails);
 	});
 
 	$('#newMemberSubmitButton').click(function(e) {
@@ -89,12 +91,35 @@ function initializePage() {
 			'keywords': email,
 			'deadline':  password,
 			'type': type
-	};
-	console.log(json);
-	// $.post('/project/new', json, function() {
-	// 	window.location.href = './clienthome'; // reload the page
-	// });
+		};
+		console.log(json);
+		// $.post('/project/new', json, function() {
+		// 	window.location.href = './clienthome'; // reload the page
+		// });
 	});
+
+	$('#signinSubmitButton').click(function(e) {
+		console.log('clicked');
+		var title = $('#new-request-form #title').val();
+		var keywords = $('#new-request-form #keywords').val();
+		var deadline = $('#new-request-form #deadline').val();
+		//var type = $('#new-request-form #type').val();
+		var json = {
+			//'user': user,
+			'title': name,
+			'keywords': email,
+			'deadline':  password,
+			'type': type
+		};
+		console.log(json);
+		// $.post('/project/new', json, function() {
+		// 	window.location.href = './clienthome'; // reload the page
+		// });
+	});
+
+	$("#testjs").click(function(e) {
+
+	})
 }
 
 

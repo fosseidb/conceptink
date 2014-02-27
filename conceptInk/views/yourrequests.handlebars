@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Thu Feb 13 2014 03:13:46 GMT+0000 (UTC) -->
+<!-- Last Published: Fri Feb 21 2014 18:07:55 GMT+0000 (UTC) -->
 <html data-wf-site="52f06826a8b031ee5c0003d8">
 <head>
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
   <script>
     WebFont.load({
       google: {
-        families: ["Bitter:400,700","Montserrat:400,700","Changa One:400","Open Sans:300,400,600,700,800","Balthazar:regular"]
+        families: ["Bitter:400,700","Montserrat:400,700","Changa One:400","Open Sans:300,400,600,700,800","Droid Sans:400,700","Balthazar:regular"]
       }
     });
   </script>
@@ -25,37 +25,48 @@
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 </head>
 <body>
-  <div>
-    <div class="w-clearfix jumbo"><a class="requestbutton" href="./yourrequests">Requests</a>
-      <h2 class="requestheading">Requests</h2>
-      <a class="logobutton" href="./clienthome"></a>
-    </div>
+  <div class="spacefiller regular"></div><a class="newrequestbtn" href="./makerequest">Create new request +</a>
+  
+  <div class="headersection">
+    <a class="w-inline-block homebtn" href="./clienthome"></a>
+    <a class="w-inline-block searchbtn" href="./artist-roster-skull"></a>
+    <a class="w-inline-block requestsbtn" href="./yourrequests"></a>
+    <a class="w-inline-block homelogobtn" href="./clienthome"></a>
+    <a class="w-inline-block logoutbtn" href="./"></a>
+    <a class="w-inline-block myprofilebtn" href="./clientprofile"></a>
   </div>
-  <div class="w-clearfix articlesection">
-    <!-- <h4 class="h4norequests">You currently have no active requests.</h4> -->
-    
-    {{#each requests}}
-      <div class="requestlistitem" id={{id}}>
-      <a href="./request"><img class="requestimage" src={{imageURL}}></a>
-      <a href="./request" class="requesttitle">{{title}}</a>
-      <a class="articletext" href="./request">{{description}}</a>
-      <p class ="articletext">{{keywords}}</p>
-      <p>{{deadline}}</p>
+
+  {{#if haverequest}}
+  <div class="feedcontainer request-respones myrequests">
+    <ul class="w-list-unstyled newsfeed">
+      {{#each requests}}
+      <li class="w-clearfix articlelistitem">
+        <a  class="w-inline-block articleimage" href="./request/{{id}}" id="intartcl">
+          <image src="{{imageUrl}}">
+          <div class="articlenametxt a1">{{title}}</div>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  {{else}}
+  <h4 class="h4norequests">You currently have no active requests.</h4>
+  {{/if}}
+
+  <ul class="w-list-unstyled some">
+    <li class="sociallist">
+      <div class="w-clearfix base">
+        <a class="w-inline-block twitter" href="http://www.twitter.com" target="_blank"></a>
+        <a class="w-inline-block facebookblock" href="http://www.facebook.com" target="_blank"></a>
+        <a class="w-inline-block emailblock" href="mailto:alex.fosseidbraaten@gmail.com?subject=ConceptInk%20Contact"></a>
+        <a class="w-inline-block google-block" href="http://google.com" target="_blank"></a>
+        <div class="copyright">© 2014 ConceptInk Ltd.</div>
       </div>
-      <hr>
-    {{/each}}
-
-
-  </div>
-  <div class="emptysection"></div>
-  <div class="w-clearfix base">
-    <a class="w-inline-block twitter" href="http://www.twitter.com" target="_blank"></a>
-    <a class="w-inline-block facebookblock" href="http://www.facebook.com" target="_blank"></a>
-    <a class="w-inline-block emailblock" href="mailto:alex.fosseidbraaten@gmail.com?subject=ConceptInk%20Contact"></a>
-    <a class="w-inline-block google-block" href="http://google.com" target="_blank"></a>
-    <div class="copyright">© 2014 ConceptInk Ltd.</div>
-  </div>
+    </li>
+  </ul>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
+  <script src="/js/introHCI.js"></script>
 </body>
 </html>

@@ -10,13 +10,21 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var clienthome = require('./routes/clienthome');
+var clientprofile = require('./routes/clientprofile');
 var newsfeed = require('./routes/newsfeed');
 var article = require('./routes/article');
 var makerequest = require('./routes/makerequest');
 var yourrequests = require('./routes/yourrequests');
 var artistroster = require('./routes/artistroster');
 var artist = require('./routes/artist');
+var artistRosterSkull = require('./routes/artist-roster-skull');
+var designRosterSkull = require('./routes/design-roster-skull');
+var template = require('./routes/template');
 var request = require('./routes/request');
+var response = require('./routes/response');
+var signin = require('./routes/signin');
+var viewDesign = require('./routes/view-design');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -54,12 +62,20 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/clienthome', clienthome.viewProject);
 app.get('/newsfeed', newsfeed.viewFeed);
-app.get('/article', article.viewArticle);
+app.get('/article/:articleid', article.viewArticle);
 app.get('/makerequest', makerequest.makeRequest);
 app.get('/yourrequests', yourrequests.viewRequest);
 app.get('/artistroster', artistroster.viewArtists);
-app.get('/artist', artist.viewArtist);
-app.get('/request', request.addRequest);
+app.get('/artist/:artistid', artist.viewArtist);
+app.get('/request/:requestid', request.viewRequest);
+
+app.get('/artist-roster-skull', artistRosterSkull.viewArtistRosterSkull);
+app.get('/design-roster-skull', designRosterSkull.viewDesignRosterSkull);
+app.get('/signin', signin.viewSignin);
+app.get('/template', template.viewTemplate);
+app.get('/response', response.viewResponse);
+app.get('/view-design/:designid', viewDesign.viewDesign);
+app.get('/clientprofile', clientprofile.viewCProfile)
 // Example route
 // app.get('/users', user.list);
 

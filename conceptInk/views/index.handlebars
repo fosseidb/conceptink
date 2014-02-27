@@ -14,7 +14,7 @@
   <script>
     WebFont.load({
       google: {
-        families: ["Bitter:400,700","Montserrat:400,700","Changa One:400","Open Sans:300,400,600,700,800","Balthazar:regular"]
+        families: ["Bitter:400,700","Montserrat:400,700","Changa One:400","Open Sans:300,400,600,700,800","Droid Sans:400,700","Balthazar:regular"]
       }
     });
   </script>
@@ -27,12 +27,12 @@
 <body class="loginwallpaper">
   <div class="w-clearfix logintopsection">
     <h1 class="loginheadingtitle">Sign Up</h1>
-    <img class="loginlogo" src="images/conceptinkLogo.png"  alt="52f54f8d81b7b76423000087_conceptinkLogo.png">
-  </div>
+    <img class="loginlogo" src="images/conceptinkLogo.png" width="158" alt="52f54f8d81b7b76423000087_conceptinkLogo.png">
+  </div><a class="loginlogin" href="./signin">Sign In</a>
   <div class="logninmidsection">
     <div class="loginblock">
       <div class="w-form">
-        <form id="new-member-form" role="form">
+        <form id="new-member-form" role="form" data-redirect="./clienthome">
           <input class="w-input loginfield" type="text" placeholder="Enter your name" id="name" name="name" data-name="Name" required="required"></input>
           <input class="w-input loginfield" type="email" placeholder="Enter your email address" id="email" name="email" data-name="Email" required="required"></input>
           <input class="w-input loginfield" type="password" placeholder="Enter your password" id="password" name="password" data-name="Password" required="required"></input>
@@ -52,14 +52,18 @@
     </div>
     <div class="logintest"><hr></div>
     <div class="loginblock">
-      <div class="w-form">
-        <form class="w-clearfix" name="email-form" data-name="Email Form">
+      <div class="w-form"><form class="w-clearfix" role="form" data-redirect="./clienthome">
           <img class="facebookblock" src="images/face.png" alt="52f45f9e2b5f813919000639_face.png"><a class="connectface" href="./clienthome">Log in with Facebook</a>
         </form>
+        <div class="w-form-done">
+          <p>Thank you! Your submission has been received!</p>
+        </div>
+        <div class="w-form-fail">
+          <p>Oops! Something went wrong while submitting the form :(</p>
+        </div>
       </div>
     </div>
-  </div><a class="loginlogin" href="./clienthome">Sign In</a>
-</body>
+  </div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
   <script src="/js/introHCI.js"></script>

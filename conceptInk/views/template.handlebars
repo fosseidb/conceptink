@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Thu Feb 13 2014 03:13:46 GMT+0000 (UTC) -->
+<!-- Last Published: Fri Feb 21 2014 18:07:54 GMT+0000 (UTC) -->
 <html data-wf-site="52f06826a8b031ee5c0003d8">
 <head>
   <meta charset="utf-8">
-  <title>Conceptink - NewsFeed</title>
+  <title>conceptink - Template</title>
   <meta name="description" content="ConceptInk is a page meant for both tattoo artists and clients. Are you looking to get a tattoo but don't know what you want? Get inspired or post a request.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -14,7 +14,7 @@
   <script>
     WebFont.load({
       google: {
-        families: ["Bitter:400,700","Montserrat:400,700","Changa One:400","Open Sans:300,400,600,700,800","Balthazar:regular"]
+        families: ["Bitter:400,700","Montserrat:400,700","Changa One:400","Open Sans:300,400,600,700,800","Droid Sans:400,700","Balthazar:regular"]
       }
     });
   </script>
@@ -25,31 +25,26 @@
   <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 </head>
 <body>
-  <div>
-    <div class="w-clearfix jumbo"><a class="requestbutton" href="./yourrequests">Requests</a>
-      <h2 class="homeheading">News Feed</h2>
-      <a class="logobutton" href="./clienthome"></a>
-    </div>
+  <div class="headersection">
+    <a class="w-inline-block homebtn" href="./clienthome"></a>
+    <a class="w-inline-block searchbtn" href="./artist-roster-skull"></a>
+    <a class="w-inline-block requestsbtn" href="./yourrequests"></a>
+    <a class="w-inline-block homelogobtn" href="./clienthome"></a>
+    <a class="w-inline-block logoutbtn" href="./"></a>
+    <a class="w-inline-block myprofilebtn" href="./clientprofile"></a>
   </div>
-  <div class="w-clearfix articlesection">
-    {{#each articles}}
-    <div class="articlelistitem" id={{id}}>
-      <a href="./article"><img class="articleimage" src={{imageUrl}}></a>
-      <a href="./article" class"newsfeedtitle">{{title}}</a>
-      <a class="newstext" href="./article">{{description}}</a>
-    </div>
-    <hr>
-    {{/each}}
-  </div>
-  <div class="w-clearfix base">
-    <a class="w-inline-block twitter" href="http://www.twitter.com" target="_blank"></a>
-    <a class="w-inline-block facebookblock" href="http://www.facebook.com" target="_blank"></a>
-    <a class="w-inline-block emailblock" href="mailto:alex.fosseidbraaten@gmail.com?subject=ConceptInk%20Contact"></a>
-    <a class="w-inline-block google-block" href="http://google.com" target="_blank"></a>
-    <div class="copyright">© 2014 ConceptInk Ltd.</div>
-  </div>
+  <ul class="w-list-unstyled">
+    <li>
+      <div class="w-clearfix base">
+        <a class="w-inline-block twitter" href="http://www.twitter.com" target="_blank"></a>
+        <a class="w-inline-block facebookblock" href="http://www.facebook.com" target="_blank"></a>
+        <a class="w-inline-block emailblock" href="mailto:alex.fosseidbraaten@gmail.com?subject=ConceptInk%20Contact"></a>
+        <a class="w-inline-block google-block" href="http://google.com" target="_blank"></a>
+        <div class="copyright">© 2014 ConceptInk Ltd.</div>
+      </div>
+    </li>
+  </ul>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
-  <script src="/js/introHCI.js"></script>
 </body>
 </html>
